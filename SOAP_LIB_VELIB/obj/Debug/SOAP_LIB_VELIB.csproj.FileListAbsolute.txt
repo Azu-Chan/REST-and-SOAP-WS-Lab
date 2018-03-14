@@ -1,0 +1,9 @@
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_LIB_VELIB\bin\Debug\SOAP_LIB_VELIB.dll.config
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_LIB_VELIB\bin\Debug\SOAP_LIB_VELIB.dll
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_LIB_VELIB\bin\Debug\SOAP_LIB_VELIB.pdb
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_LIB_VELIB\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_LIB_VELIB\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_LIB_VELIB\obj\Debug\SOAP_LIB_VELIB.csprojResolveAssemblyReference.cache
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_LIB_VELIB\obj\Debug\SOAP_LIB_VELIB.csproj.CoreCompileInputs.cache
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_LIB_VELIB\obj\Debug\SOAP_LIB_VELIB.dll
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_LIB_VELIB\obj\Debug\SOAP_LIB_VELIB.pdb

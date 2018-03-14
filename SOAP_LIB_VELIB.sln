@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAP_LIB_VELIB", "SOAP_LIB_VELIB\SOAP_LIB_VELIB.csproj", "{A636EF82-0EBB-4614-A4E4-C57DE3100373}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAP_CLIENT_VELIB", "SOAP_CLIENT_VELIB\SOAP_CLIENT_VELIB.csproj", "{01BD6CCD-D759-4723-A8F6-C11CDC7BF7B7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A636EF82-0EBB-4614-A4E4-C57DE3100373} = {A636EF82-0EBB-4614-A4E4-C57DE3100373}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A636EF82-0EBB-4614-A4E4-C57DE3100373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A636EF82-0EBB-4614-A4E4-C57DE3100373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A636EF82-0EBB-4614-A4E4-C57DE3100373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A636EF82-0EBB-4614-A4E4-C57DE3100373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01BD6CCD-D759-4723-A8F6-C11CDC7BF7B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01BD6CCD-D759-4723-A8F6-C11CDC7BF7B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01BD6CCD-D759-4723-A8F6-C11CDC7BF7B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01BD6CCD-D759-4723-A8F6-C11CDC7BF7B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A7E7FB5-DB82-40E5-9385-5AA1E25EC64A}
+	EndGlobalSection
+EndGlobal

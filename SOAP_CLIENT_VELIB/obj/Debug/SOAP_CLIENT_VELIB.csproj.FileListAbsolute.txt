@@ -1,0 +1,10 @@
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CLIENT_VELIB\bin\Debug\SOAP_CLIENT_VELIB.exe.config
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CLIENT_VELIB\bin\Debug\SOAP_CLIENT_VELIB.exe
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CLIENT_VELIB\bin\Debug\SOAP_CLIENT_VELIB.pdb
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CLIENT_VELIB\obj\Debug\SOAP_CLIENT_VELIB.csprojResolveAssemblyReference.cache
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CLIENT_VELIB\obj\Debug\SOAP_CLIENT_VELIB.Form1.resources
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CLIENT_VELIB\obj\Debug\SOAP_CLIENT_VELIB.Properties.Resources.resources
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CLIENT_VELIB\obj\Debug\SOAP_CLIENT_VELIB.csproj.GenerateResource.Cache
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CLIENT_VELIB\obj\Debug\SOAP_CLIENT_VELIB.csproj.CoreCompileInputs.cache
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CLIENT_VELIB\obj\Debug\SOAP_CLIENT_VELIB.exe
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CLIENT_VELIB\obj\Debug\SOAP_CLIENT_VELIB.pdb

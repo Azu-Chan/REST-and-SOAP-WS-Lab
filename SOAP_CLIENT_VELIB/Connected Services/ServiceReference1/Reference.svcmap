@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5ec4ce0d-afff-47c9-94dd-71e24b1a87cd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/SOAPLIBVELIB" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SOAPLIBVELIB.disco" MetadataType="Disco" ID="a36226b5-8a61-4074-b4bf-87f25834fa3f" SourceId="1" SourceUrl="http://localhost:8733/SOAPLIBVELIB?disco" />
+    <MetadataFile FileName="SOAPLIBVELIB.xsd" MetadataType="Schema" ID="1c7b6b0f-fefc-4e2e-b3ef-8d028043cd17" SourceId="1" SourceUrl="http://localhost:8733/SOAPLIBVELIB?xsd=xsd2" />
+    <MetadataFile FileName="SOAPLIBVELIB1.xsd" MetadataType="Schema" ID="d3dec662-e156-4d2f-9bc6-0df70369e5ed" SourceId="1" SourceUrl="http://localhost:8733/SOAPLIBVELIB?xsd=xsd0" />
+    <MetadataFile FileName="ServiceVelib.wsdl" MetadataType="Wsdl" ID="95579bb4-8750-4fdc-90af-dd6c1f080827" SourceId="1" SourceUrl="http://localhost:8733/SOAPLIBVELIB?wsdl" />
+    <MetadataFile FileName="SOAPLIBVELIB2.xsd" MetadataType="Schema" ID="14cacbf2-f70c-42e2-bbba-aca3a72a4055" SourceId="1" SourceUrl="http://localhost:8733/SOAPLIBVELIB?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
