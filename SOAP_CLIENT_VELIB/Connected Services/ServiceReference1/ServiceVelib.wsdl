@@ -210,44 +210,6 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_IServiceVelib_getstationsAndBikes_Input_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_IServiceVelib_getstationsAndBikes_output_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:8733/SOAPLIBVELIB?xsd=xsd0" namespace="http://tempuri.org/" />
@@ -273,12 +235,6 @@
   <wsdl:message name="IServiceVelib_getAvailableBikes_OutputMessage">
     <wsdl:part name="parameters" element="tns:getAvailableBikesResponse" />
   </wsdl:message>
-  <wsdl:message name="IServiceVelib_getstationsAndBikes_InputMessage">
-    <wsdl:part name="parameters" element="tns:getstationsAndBikes" />
-  </wsdl:message>
-  <wsdl:message name="IServiceVelib_getstationsAndBikes_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getstationsAndBikesResponse" />
-  </wsdl:message>
   <wsdl:portType name="IServiceVelib">
     <wsdl:operation name="getCities">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceVelib/getCities" message="tns:IServiceVelib_getCities_InputMessage" />
@@ -291,10 +247,6 @@
     <wsdl:operation name="getAvailableBikes">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceVelib/getAvailableBikes" message="tns:IServiceVelib_getAvailableBikes_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceVelib/getAvailableBikesResponse" message="tns:IServiceVelib_getAvailableBikes_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="getstationsAndBikes">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServiceVelib/getstationsAndBikes" message="tns:IServiceVelib_getstationsAndBikes_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServiceVelib/getstationsAndBikesResponse" message="tns:IServiceVelib_getstationsAndBikes_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WSHttpBinding_IServiceVelib" type="tns:IServiceVelib">
@@ -330,17 +282,6 @@
       </wsdl:input>
       <wsdl:output>
         <wsp:PolicyReference URI="#WSHttpBinding_IServiceVelib_getAvailableBikes_output_policy" />
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="getstationsAndBikes">
-      <soap12:operation soapAction="http://tempuri.org/IServiceVelib/getstationsAndBikes" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSHttpBinding_IServiceVelib_getstationsAndBikes_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <wsp:PolicyReference URI="#WSHttpBinding_IServiceVelib_getstationsAndBikes_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>

@@ -17,13 +17,14 @@ Arboréscence de la solution :
 
 
 Utilisation :
-Application graphique, 2 valeurs sont attendues pour afficher le nombre de vélos disponibles.
+Application graphique, 3 valeurs sont attendues pour afficher le nombre de vélos disponibles.
 1. Le nom du contrat (Combobox du haut).
 2. Le nom de la station (Combobox du bas).
-3. Cliquer sur le bouton de Recherche.
-La valeur s'affiche en bas de la fenêtre.
-!!! Il y a un bouton de rafraichissement de données qui réset les éléments saisis sur l'interface graphique et vide le cache local de données (leste de stations et vélos disponibles).
-
+3. Temps minimal d'acceptation de la donnée (dernier rafraîchissement du nombre de vélos disponibles pour la station voulue) en secondes,
+   si ce champ est vide, on considère 0 (rafraîchissemene obligatoire). Ce champ utilise la notion de cache de données présente dans le service.
+4. Cliquer sur le bouton de Recherche.
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+La valeur s'affiche en bas de la fenêtre dans un label.
 
 
 

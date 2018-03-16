@@ -17,9 +17,9 @@ namespace SOAP_LIB_VELIB
         IList<string> getStations(string city);
 
         [OperationContract]
-        int getAvailableBikes(string city, string station);
+        int getAvailableBikes(string city, string station, int delay);
 
-        [OperationContract]
-        IDictionary<string, int> getstationsAndBikes(string contract);
+        //[OperationContract]
+        //IDictionary<string, int> getstationsAndBikes(string contract);
     }
 }

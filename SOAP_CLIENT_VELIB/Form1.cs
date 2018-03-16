@@ -15,8 +15,6 @@ namespace SOAP_CLIENT_VELIB
     {
         private static ServiceVelibClient client = new ServiceVelibClient();
 
-        private static Dictionary<string, Dictionary<string, int>> tampon = new Dictionary<string, Dictionary<string, int>>();
-
         public Form1()
         {
             InitializeComponent();
@@ -29,11 +27,8 @@ namespace SOAP_CLIENT_VELIB
             comboBox1.Items.Clear();
             comboBox1.Text = "";
             label2.Text = "";
-            if (!tampon.ContainsKey(comboBox2.SelectedItem.ToString()))
-            {
-                tampon.Add(comboBox2.SelectedItem.ToString(), client.getstationsAndBikes(comboBox2.SelectedItem.ToString()));
-            }
-            comboBox1.Items.AddRange(tampon[comboBox2.SelectedItem.ToString()].Keys.ToArray());
+
+            comboBox1.Items.AddRange(client.getStations(comboBox2.SelectedItem.ToString()));
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -43,18 +38,24 @@ namespace SOAP_CLIENT_VELIB
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(!comboBox1.Text.Equals(""))
-                label2.Text = tampon[comboBox2.SelectedItem.ToString()][comboBox1.SelectedItem.ToString()].ToString();
+            if (!comboBox1.Text.Equals(""))
+            {
+                int time;
+                if (textBox1.Text.Equals(""))
+                    time = 0;
+                else
+                    time = Convert.ToInt32(textBox1.Text);
+                label2.Text = client.getAvailableBikes(comboBox2.Text, comboBox1.Text, time).ToString();
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            comboBox1.Items.Clear();
-            comboBox1.Text = "";
-            comboBox2.Text = "";
-            label2.Text = "";
-
-            tampon.Clear();
+            if (System.Text.RegularExpressions.Regex.IsMatch(textBox1.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Une valeur numérique est attendue");
+                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+            }
         }
     }
 }

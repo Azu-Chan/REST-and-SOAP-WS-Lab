@@ -28,16 +28,10 @@ namespace SOAP_CLIENT_VELIB.ServiceReference1 {
         System.Threading.Tasks.Task<string[]> getStationsAsync(string city);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceVelib/getAvailableBikes", ReplyAction="http://tempuri.org/IServiceVelib/getAvailableBikesResponse")]
-        int getAvailableBikes(string city, string station);
+        int getAvailableBikes(string city, string station, int delay);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceVelib/getAvailableBikes", ReplyAction="http://tempuri.org/IServiceVelib/getAvailableBikesResponse")]
-        System.Threading.Tasks.Task<int> getAvailableBikesAsync(string city, string station);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceVelib/getstationsAndBikes", ReplyAction="http://tempuri.org/IServiceVelib/getstationsAndBikesResponse")]
-        System.Collections.Generic.Dictionary<string, int> getstationsAndBikes(string contract);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceVelib/getstationsAndBikes", ReplyAction="http://tempuri.org/IServiceVelib/getstationsAndBikesResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<string, int>> getstationsAndBikesAsync(string contract);
+        System.Threading.Tasks.Task<int> getAvailableBikesAsync(string city, string station, int delay);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -83,20 +77,12 @@ namespace SOAP_CLIENT_VELIB.ServiceReference1 {
             return base.Channel.getStationsAsync(city);
         }
         
-        public int getAvailableBikes(string city, string station) {
-            return base.Channel.getAvailableBikes(city, station);
+        public int getAvailableBikes(string city, string station, int delay) {
+            return base.Channel.getAvailableBikes(city, station, delay);
         }
         
-        public System.Threading.Tasks.Task<int> getAvailableBikesAsync(string city, string station) {
-            return base.Channel.getAvailableBikesAsync(city, station);
-        }
-        
-        public System.Collections.Generic.Dictionary<string, int> getstationsAndBikes(string contract) {
-            return base.Channel.getstationsAndBikes(contract);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<string, int>> getstationsAndBikesAsync(string contract) {
-            return base.Channel.getstationsAndBikesAsync(contract);
+        public System.Threading.Tasks.Task<int> getAvailableBikesAsync(string city, string station, int delay) {
+            return base.Channel.getAvailableBikesAsync(city, station, delay);
         }
     }
 }
