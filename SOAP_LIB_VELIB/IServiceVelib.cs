@@ -19,6 +19,18 @@ namespace SOAP_LIB_VELIB
         [OperationContract]
         int getAvailableBikes(string city, string station, int delay);
 
+        [OperationContract(AsyncPattern = true)]
+        IAsyncResult BegingetCities(AsyncCallback callback, object state);
+        IList<string> EndgetCities(IAsyncResult asyncResult);
+
+        [OperationContract(AsyncPattern = true)]
+        IAsyncResult BegingetStations(string city, AsyncCallback callback, object state);
+        IList<string> EndgetStations(IAsyncResult asyncResult);
+
+        [OperationContract(AsyncPattern = true)]
+        IAsyncResult BegingetAvailableBikes(string city, string station, int delay, AsyncCallback callback, object state);
+        int EndgetAvailableBikes(IAsyncResult asyncResult);
+
         //[OperationContract]
         //IDictionary<string, int> getstationsAndBikes(string contract);
     }

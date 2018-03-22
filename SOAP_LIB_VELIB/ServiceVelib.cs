@@ -4,11 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Threading;
 
 namespace Wcf_SOAP_Velib
 {
     public class ServiceVelib : IServiceVelib
     {
+        public const int DelayMilliseconds = 10000;
         private static string API_KEY = "9e2a4e6b9b6673d458518520fc1931a3220ae1a0";
 
         private static Dictionary<string, Dictionary<string, StationProperties>> tampon = new Dictionary<string, Dictionary<string, StationProperties>>();
@@ -123,6 +125,75 @@ namespace Wcf_SOAP_Velib
             return false;
         }
 
+        public IAsyncResult BegingetCities(AsyncCallback callback, object state)
+        {
+            var asyncResult = new SimpleAsyncResult<IList<string>>(state);
+
+            // mimic a long running operation
+            var timer = new System.Timers.Timer(DelayMilliseconds);
+            timer.Elapsed += (_, args) =>
+            {
+                asyncResult.Result = getCities();
+                asyncResult.IsCompleted = true;
+                callback(asyncResult);
+                timer.Enabled = false;
+                timer.Close();
+            };
+            timer.Enabled = true;
+            return asyncResult;
+        }
+
+        public IList<string> EndgetCities(IAsyncResult asyncResult)
+        {
+            return ((SimpleAsyncResult<IList<string>>)asyncResult).Result;
+        }
+
+        public IAsyncResult BegingetStations(string city, AsyncCallback callback, object state)
+        {
+            var asyncResult = new SimpleAsyncResult<IList<string>>(state);
+
+            // mimic a long running operation
+            var timer = new System.Timers.Timer(DelayMilliseconds);
+            timer.Elapsed += (_, args) =>
+            {
+                asyncResult.Result = getStations(city);
+                asyncResult.IsCompleted = true;
+                callback(asyncResult);
+                timer.Enabled = false;
+                timer.Close();
+            };
+            timer.Enabled = true;
+            return asyncResult;
+        }
+
+        public IList<string> EndgetStations(IAsyncResult asyncResult)
+        {
+            return ((SimpleAsyncResult<IList<string>>)asyncResult).Result;
+        }
+
+        public IAsyncResult BegingetAvailableBikes(string city, string station, int delay, AsyncCallback callback, object state)
+        {
+            var asyncResult = new SimpleAsyncResult<int>(state);
+
+            // mimic a long running operation
+            var timer = new System.Timers.Timer(DelayMilliseconds);
+            timer.Elapsed += (_, args) =>
+            {
+                asyncResult.Result = getAvailableBikes(city, station, delay);
+                asyncResult.IsCompleted = true;
+                callback(asyncResult);
+                timer.Enabled = false;
+                timer.Close();
+            };
+            timer.Enabled = true;
+            return asyncResult;
+        }
+
+        public int EndgetAvailableBikes(IAsyncResult asyncResult)
+        {
+            return ((SimpleAsyncResult<int>)asyncResult).Result;
+        }
+
         [Obsolete("Obsolète depuis la suspression du cache client", true)]
         public IDictionary<string, int> getstationsAndBikes(string contract)
         {
@@ -151,5 +222,67 @@ namespace Wcf_SOAP_Velib
 
             return values;
         }
+
+    }
+
+
+    public class SimpleAsyncResult<T> : IAsyncResult
+    {
+        private readonly object accessLock = new object();
+        private bool isCompleted = false;
+        private T result;
+
+        public SimpleAsyncResult(object asyncState)
+        {
+            AsyncState = asyncState;
+        }
+
+        public T Result
+        {
+            get
+            {
+                lock (accessLock)
+                {
+                    return result;
+                }
+            }
+            set
+            {
+                lock (accessLock)
+                {
+                    result = value;
+                }
+            }
+        }
+
+        public bool IsCompleted
+        {
+            get
+            {
+                lock (accessLock)
+                {
+                    return isCompleted;
+                }
+            }
+            set
+            {
+                lock (accessLock)
+                {
+                    isCompleted = value;
+                }
+            }
+        }
+
+        // WCF seems to use the async callback rather than checking the wait handle
+        // so we can safely return null here.
+        public WaitHandle AsyncWaitHandle { get { return null; } }
+
+        // We will always be doing an async operation so completed synchronously should always
+        // be false.
+        public bool CompletedSynchronously { get { return false; } }
+
+        public object AsyncState { get; private set; }
+
+        WaitHandle IAsyncResult.AsyncWaitHandle => throw new NotImplementedException();
     }
 }

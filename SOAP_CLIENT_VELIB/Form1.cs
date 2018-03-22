@@ -19,7 +19,9 @@ namespace SOAP_CLIENT_VELIB
         {
             InitializeComponent();
 
-            comboBox2.Items.AddRange(client.getCities().ToArray());
+            AwaitInterface.getCitiesAsync(client, comboBox2);
+
+            //comboBox2.Items.AddRange(client.getCities().ToArray());
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -28,7 +30,9 @@ namespace SOAP_CLIENT_VELIB
             comboBox1.Text = "";
             label2.Text = "";
 
-            comboBox1.Items.AddRange(client.getStations(comboBox2.SelectedItem.ToString()));
+            AwaitInterface.getStationsAsync(client, comboBox2.SelectedItem.ToString(), comboBox1);
+
+            //comboBox1.Items.AddRange(client.getStations(comboBox2.SelectedItem.ToString()));
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -45,7 +49,10 @@ namespace SOAP_CLIENT_VELIB
                     time = 0;
                 else
                     time = Convert.ToInt32(textBox1.Text);
-                label2.Text = client.getAvailableBikes(comboBox2.Text, comboBox1.Text, time).ToString();
+
+                AwaitInterface.getAvailableBikesAsync(client, comboBox2.Text, comboBox1.Text, time, label2);
+
+                //label2.Text = client.getAvailableBikes(comboBox2.Text, comboBox1.Text, time).ToString();
             }
         }
 
