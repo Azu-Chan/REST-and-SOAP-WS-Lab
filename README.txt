@@ -1,4 +1,4 @@
-README.txt - RITROVATO Dylan
+﻿README.txt - RITROVATO Dylan
 ==========+-+===============
 
 
@@ -8,7 +8,9 @@ Arboréscence de la solution :
 |
 +--- packages (contient les bibliothèques externes nécessaires à la solution, pour parser les JSON (.NET JSON newtonsoft))
 |
-+--- SOAP_CLIENT_VELIB (client SOAP)
++--- SOAP_CLIENT_VELIB (client SOAP graphique)
+|
++--- SOAP_CONSOLE_VELIB (client SOAP en ligne de commande)
 |
 +--- SOAP_LIB_VELIB (service SOAP servant d'intermédiaire entre le client SOAP et l'API REST)
 |
@@ -17,7 +19,7 @@ Arboréscence de la solution :
 
 
 Utilisation :
-Application graphique, 3 valeurs sont attendues pour afficher le nombre de vélos disponibles.
+* Application graphique, 3 valeurs sont attendues pour afficher le nombre de vélos disponibles.
 1. Le nom du contrat (Combobox du haut).
 2. Le nom de la station (Combobox du bas).
 3. Temps minimal d'acceptation de la donnée (dernier rafraîchissement du nombre de vélos disponibles pour la station voulue) en secondes,
@@ -25,6 +27,8 @@ Application graphique, 3 valeurs sont attendues pour afficher le nombre de vélo
 4. Cliquer sur le bouton de Recherche.
 -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
 La valeur s'affiche en bas de la fenêtre dans un label.
+
+* Application console, ...
 
 
 

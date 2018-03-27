@@ -52,6 +52,9 @@ namespace Wcf_SOAP_Velib
         {
             IList<string> listStations = new List<string>();
 
+            if (!tampon.ContainsKey(contract))
+                return null;
+
             if (tampon[contract].Count < 1)
             {
                 JArray jsonArray = null;

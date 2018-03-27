@@ -1,0 +1,7 @@
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CONSOLE_VELIB\bin\Debug\SOAP_CONSOLE_VELIB.exe.config
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CONSOLE_VELIB\bin\Debug\SOAP_CONSOLE_VELIB.exe
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CONSOLE_VELIB\bin\Debug\SOAP_CONSOLE_VELIB.pdb
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CONSOLE_VELIB\obj\Debug\SOAP_CONSOLE_VELIB.csprojResolveAssemblyReference.cache
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CONSOLE_VELIB\obj\Debug\SOAP_CONSOLE_VELIB.csproj.CoreCompileInputs.cache
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CONSOLE_VELIB\obj\Debug\SOAP_CONSOLE_VELIB.exe
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_CONSOLE_VELIB\obj\Debug\SOAP_CONSOLE_VELIB.pdb

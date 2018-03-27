@@ -10,6 +10,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAP_CLIENT_VELIB", "SOAP_C
 		{A636EF82-0EBB-4614-A4E4-C57DE3100373} = {A636EF82-0EBB-4614-A4E4-C57DE3100373}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAP_CONSOLE_VELIB", "SOAP_CONSOLE_VELIB\SOAP_CONSOLE_VELIB.csproj", "{7DB9E12E-F670-42DB-9283-8C37687ADD07}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A636EF82-0EBB-4614-A4E4-C57DE3100373} = {A636EF82-0EBB-4614-A4E4-C57DE3100373}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +29,10 @@ Global
 		{01BD6CCD-D759-4723-A8F6-C11CDC7BF7B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01BD6CCD-D759-4723-A8F6-C11CDC7BF7B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01BD6CCD-D759-4723-A8F6-C11CDC7BF7B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DB9E12E-F670-42DB-9283-8C37687ADD07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DB9E12E-F670-42DB-9283-8C37687ADD07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DB9E12E-F670-42DB-9283-8C37687ADD07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DB9E12E-F670-42DB-9283-8C37687ADD07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

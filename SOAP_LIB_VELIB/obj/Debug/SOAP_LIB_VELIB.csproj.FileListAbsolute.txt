@@ -7,3 +7,4 @@ C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_LIB_VELIB\obj\Debug\SOAP_LIB_VEL
 C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_LIB_VELIB\obj\Debug\SOAP_LIB_VELIB.csproj.CoreCompileInputs.cache
 C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_LIB_VELIB\obj\Debug\SOAP_LIB_VELIB.dll
 C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_LIB_VELIB\obj\Debug\SOAP_LIB_VELIB.pdb
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\SOAP_LIB_VELIB\obj\Debug\SOAP_LIB_VELIB.csproj.CopyComplete
