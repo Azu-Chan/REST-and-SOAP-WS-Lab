@@ -19,7 +19,7 @@ Arboréscence de la solution :
 
 
 Utilisation :
-* Application graphique, 3 valeurs sont attendues pour afficher le nombre de vélos disponibles.
+* Application graphique, 3 valeurs sont attendues pour afficher le nombre de vélos disponibles (client async).
 1. Le nom du contrat (Combobox du haut).
 2. Le nom de la station (Combobox du bas).
 3. Temps minimal d'acceptation de la donnée (dernier rafraîchissement du nombre de vélos disponibles pour la station voulue) en secondes,
@@ -28,12 +28,17 @@ Utilisation :
 -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
 La valeur s'affiche en bas de la fenêtre dans un label.
 
-* Application console, ...
-
-
+* Application console (non async).
+Liste des commandes disponibles :
+exit : permet de quitter le programme proprement.
+help : affiche une aide concernant la liste des commandes disponibles.
+contracts : affiche la liste des contrats disponibles.
+stations [contract] : affiche la liste des stations du contrat passé en paramètre.
+bikes [contract] [station_reg] : affiche le nombre de vélos disponibles aux stations contenant [station_reg] du contrat [contract].
 
 
 Bonus (ascii-art de Twilight Sparkle (Santé mentale affaiblie par le stress), MLP par Dolkar <https://www.equestriaforums.com/index.php?topic=11672.0>) :
+
                      ░████
                     ▒▓  ▓█
                          ██▓

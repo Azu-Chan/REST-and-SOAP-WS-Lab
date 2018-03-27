@@ -14,6 +14,10 @@ namespace SOAP_CONSOLE_VELIB
         static void Main(string[] args)
         {
             string input = null;
+            client.getCities();
+
+            Console.WriteLine("Bienvenue dans le client en mode CLI de SOAP_VELIB.");
+            Console.WriteLine("Tapez help pour avoir une aide sur les commandes disponibles et leur utilisation.");
 
             do
             {
@@ -50,20 +54,11 @@ namespace SOAP_CONSOLE_VELIB
                             return 0;
                     }
                     break;
-                case 3:
-                    PrintBikes(exploded[1], exploded[2], null);
-                    return 0;
-                case 4:
-                    try
-                    {
-                        int delay = Int32.Parse(exploded[3]);
-                        PrintBikes(exploded[1], exploded[2], delay);
-                    }
-                    catch (FormatException e)
-                    {
-                        Console.WriteLine($"Le troisième argument {exploded[3]} doit être un entier.");
-                    }
-                    return 0;
+            }
+            if(exploded.Length >= 3 && exploded[0] == "bikes")
+            {
+                PrintBikes(exploded);
+                return 0;
             }
 
             Console.WriteLine($"{input} n'est pas reconnu comme une commande.");
@@ -77,7 +72,7 @@ namespace SOAP_CONSOLE_VELIB
             Console.WriteLine("help : affiche une aide concernant la liste des commandes disponibles.");
             Console.WriteLine("contracts : affiche la liste des contrats disponibles.");
             Console.WriteLine("stations [contract] : affiche la liste des stations du contrat passé en paramètre.");
-            Console.WriteLine("bikes [contract] [station] [delay - optionnal] : blahblahblah."); // TODO problème pour splitter....
+            Console.WriteLine("bikes [contract] [station_reg] : affiche le nombre de vélos disponibles aux stations contenant [station_reg] du contrat [contract].");
         }
 
         private static void PrintContracts()
@@ -104,17 +99,38 @@ namespace SOAP_CONSOLE_VELIB
             }
         }
 
-        private static void PrintBikes(string contract, string station, int? delay)
+        private static void PrintBikes(string[] datas)
         {
-            int delayP;
-            if (delay == null)
-                delayP = 0;
-            else
-                delayP = (int)delay;
+            string regex_station = "";
+            for(int i = 2; i < datas.Length - 1; i++)
+            {
+                regex_station += datas[i] + " ";
+            }
+            regex_station += datas[datas.Length - 1];
 
-            int res = client.getAvailableBikes(contract, station, delayP); // TODO Gérer les cas qui n'existent pas.........
+            string[] res = client.getStations(datas[1]);
 
-            Console.WriteLine(res);
+            if (res == null)
+            {
+                Console.WriteLine($"Le contrat {datas[1]} n'existe pas.");
+                return;
+            }
+
+            bool tst = false;
+            foreach (string elem in res)
+            {
+                if (elem.ToLower().Contains(regex_station.ToLower()))
+                {
+                    tst = true;
+                    int num = client.getAvailableBikes(datas[1], elem, 0);
+                    Console.WriteLine("Station détectée : " + elem + ", nombre de vélos disponibles : " + num);
+                }
+            }
+
+            if(!tst)
+            {
+                Console.WriteLine("Aucune station détectée.");
+            }
         }
 
     }
