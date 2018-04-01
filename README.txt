@@ -17,6 +17,12 @@ Arboréscence de la solution :
 +--- SOAP_LIB_VELIB.sln (fichier .sln de la solution)
 
 
+Axes choisis :
+* MVP (Mark Scale : 10 points)
+* Graphical User Interface for the client (Mark Scale : 2 points)
+* Replace all the accesses to WS (beetween Velib WS and IWS, between IWS and WS Clients) with asynchronous ones. Some indications can be find just below. (Mark Scale : 3 points)
+* Add a cache in IWS, to reduce communications between Velib WS and IWS (Mark Scale : 4 points)
+
 
 Utilisation :
 * Application graphique, 3 valeurs sont attendues pour afficher le nombre de vélos disponibles (client async).
