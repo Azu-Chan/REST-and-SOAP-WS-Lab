@@ -1,0 +1,12 @@
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\EventConsole\bin\Debug\EventConsole.exe.config
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\EventConsole\bin\Debug\EventConsole.exe
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\EventConsole\bin\Debug\EventConsole.pdb
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\EventConsole\bin\Debug\Velib_Service_Subscrib.dll
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\EventConsole\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\EventConsole\bin\Debug\Velib_Service_Subscrib.pdb
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\EventConsole\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\EventConsole\obj\Debug\EventConsole.csprojResolveAssemblyReference.cache
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\EventConsole\obj\Debug\EventConsole.csproj.CoreCompileInputs.cache
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\EventConsole\obj\Debug\EventConsole.csproj.CopyComplete
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\EventConsole\obj\Debug\EventConsole.exe
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\EventConsole\obj\Debug\EventConsole.pdb

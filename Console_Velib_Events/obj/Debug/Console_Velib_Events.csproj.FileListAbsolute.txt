@@ -1,0 +1,7 @@
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\Console_Velib_Events\bin\Debug\Console_Velib_Events.exe.config
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\Console_Velib_Events\bin\Debug\Console_Velib_Events.exe
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\Console_Velib_Events\bin\Debug\Console_Velib_Events.pdb
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\Console_Velib_Events\obj\Debug\Console_Velib_Events.csprojResolveAssemblyReference.cache
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\Console_Velib_Events\obj\Debug\Console_Velib_Events.csproj.CoreCompileInputs.cache
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\Console_Velib_Events\obj\Debug\Console_Velib_Events.exe
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\Console_Velib_Events\obj\Debug\Console_Velib_Events.pdb

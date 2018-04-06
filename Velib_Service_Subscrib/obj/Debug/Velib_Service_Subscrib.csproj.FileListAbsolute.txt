@@ -1,0 +1,9 @@
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\Velib_Service_Subscrib\bin\Debug\Velib_Service_Subscrib.dll
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\Velib_Service_Subscrib\bin\Debug\Velib_Service_Subscrib.pdb
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\Velib_Service_Subscrib\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\Velib_Service_Subscrib\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\Velib_Service_Subscrib\obj\Debug\Velib_Service_Subscrib.csprojResolveAssemblyReference.cache
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\Velib_Service_Subscrib\obj\Debug\Velib_Service_Subscrib.csproj.CoreCompileInputs.cache
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\Velib_Service_Subscrib\obj\Debug\Velib_Service_Subscrib.csproj.CopyComplete
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\Velib_Service_Subscrib\obj\Debug\Velib_Service_Subscrib.dll
+C:\Users\dylan\source\repos\SOAP_LIB_VELIB\Velib_Service_Subscrib\obj\Debug\Velib_Service_Subscrib.pdb
